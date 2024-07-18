@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Dog Photo Generator</title>
+   <link rel="stylesheet" type="text/css" href="styles/main.css" >
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Corben:wght@400;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐶 </text></svg>">
+</head>
+   <body>
+  <h1>Dog Photo 🦴 Generator</h1>
+  <% if (locals.random) { %>
+   <div class="randomPhotos">
+  
+    <img class=dogPhoto src="<%= random %>">
+   </div>
+   <div class="newPhoto">
+    <% } else { %>
+        <div class="newPhoto">
+            <h2>Welcome to the Dog Photo Generator!</h2>
+            <h3>Click the button below to see random dog photos from all over the world with the help of the Dog API!</h3>
+    <% } %>
+    <form action="/submit" method="POST">
+        <input type="submit" value="Generate Dog Photo">
+      </form>
+   </div>
+</div>
+   </body> 
+   
+   </html>
+
+
+
+   
